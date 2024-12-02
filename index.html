@@ -1,0 +1,57 @@
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <div id="app">
+        <!-- Pantalla de Registro -->
+        <div id="register-screen">
+            <h1>Bienvenido a Emprendify 🚀</h1>
+            <p>Regístrate para comenzar</p>
+            <form id="register-form">
+                <input type="text" id="username" placeholder="Nombre de usuario" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <input type="tel" id="phone" placeholder="Teléfono (opcional)">
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+        <!-- Menú Principal -->
+        <div id="main-menu" class="hidden">
+            <h1>Elige tu entrada</h1>
+            <button id="emprender-btn">Quiero Emprender</button>
+            <button id="invertir-btn">Quiero Invertir</button>
+            <button id="logout-btn">Cerrar sesión</button> <!-- Cerrar sesión solo en esta pantalla -->
+        </div>
+
+        <!-- Pantalla de Emprender -->
+        <div id="emprender-screen" class="hidden">
+            <h1>Sube tu producto</h1>
+            <form id="emprender-form">
+                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                <input type="text" id="product-price" placeholder="Precio o trato" required>
+                <input type="file" id="product-image" accept="image/*" required>
+                <button type="submit">Subir</button>
+            </form>
+            <button id="back-to-menu1">Volver</button>
+            <h2>Productos subidos</h2>
+            <div id="product-list-emprendedor"></div>
+        </div>
+
+        <!-- Pantalla de Inversor -->
+        <div id="invertir-screen" class="hidden">
+            <h1>Explora productos</h1>
+            <div id="product-list"></div>
+            <button id="back-to-menu2">Volver</button>
+        </div>
+
+        <!-- Chat -->
+        <div id="chat-box" class="hidden">
+            <h2>Chat con el emprendedor</h2>
+            <div id="chat-messages"></div>
+            <textarea id="chat-message" placeholder="Escribe tu mensaje"></textarea>
+            <button id="send-message">Enviar mensaje</button>
+            <button id="back-to-menu-from-chat">Volver</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
